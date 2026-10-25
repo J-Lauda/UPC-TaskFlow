@@ -72,19 +72,15 @@ No se requiere instalar dependencias ni compilar el proyecto. El almacenamiento 
 
 Estas son comprobaciones realizadas durante el desarrollo; no constituyen una certificación de compatibilidad con todos los navegadores o dispositivos.
 
-### Pruebas manuales que debe confirmar el estudiante
+### Pruebas manuales confirmadas por el estudiante
 
-- Abrir la aplicación en el navegador que usará para la demostración.
-- Crear una tarea y confirmar que se muestran correctamente título, curso, fecha y prioridad.
-- Intentar enviar el formulario incompleto y comprobar la validación del navegador.
-- Editar una tarea y cancelar una edición para verificar ambos comportamientos.
-- Cambiar una tarea a completada y luego a pendiente.
-- Probar los tres filtros y revisar los contadores después de cada cambio.
-- Intentar eliminar una tarea y cancelar la confirmación; después, confirmar otra eliminación.
-- Recargar la página y comprobar que las tareas y estados se conservaron.
-- Probar la interfaz en un celular o en el modo responsive de las herramientas del navegador.
+El estudiante confirmó haber probado la aplicación publicada y haber realizado estas acciones:
 
-No se incluyen capturas ni resultados de pruebas manuales del estudiante: debe realizarlos y confirmarlos antes de entregar.
+- Crear actividades.
+- Editar la descripción de una actividad.
+- Cambiar el estado de una actividad entre pendiente y completada.
+
+No se reportan aquí otras pruebas manuales como realizadas.
 
 ## 10. Uso de GitHub Copilot
 
@@ -127,5 +123,5 @@ Estas mejoras son propuestas; no están implementadas en la versión actual.
 
 ## 12. Enlaces
 
-- **Repositorio GitHub:** pendiente de publicación.
-- **GitHub Pages:** pendiente de publicación.
+- **Repositorio GitHub:** [UPC-TaskFlow](https://github.com/J-Lauda/UPC-TaskFlow)
+- **Aplicación en GitHub Pages:** [UPC TaskFlow](https://j-lauda.github.io/UPC-TaskFlow/)
