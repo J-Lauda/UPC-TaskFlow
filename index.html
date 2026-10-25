@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7fb">
+  <title>UPC TaskFlow | Organiza tu vida académica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div>
+        <div class="brand" aria-label="UPC TaskFlow">
+          <div class="brand-mark" aria-hidden="true">tf</div>
+          <div>
+            <h1 class="brand-name">UPC TaskFlow</h1>
+            <p class="brand-caption">Tu espacio académico, en orden</p>
+          </div>
+        </div>
+        <p class="eyebrow">Organiza tu ciclo, paso a paso</p>
+        <h2>Un lugar para todas tus tareas.</h2>
+        <p class="hero-description">Registra tus entregas, prácticas y evaluaciones para tener claro qué sigue en cada curso.</p>
+      </div>
+      <div class="hero-note">Tus tareas se guardan en este dispositivo</div>
+    </header>
+
+    <section class="workspace" aria-label="Gestión de tareas académicas">
+      <section class="panel form-panel" aria-labelledby="form-title">
+        <div class="panel-heading">
+          <h3 id="form-title">Nueva tarea</h3>
+          <p id="form-description">Completa los datos para agregarla a tu lista.</p>
+        </div>
+        <form id="task-form">
+          <div class="field">
+            <label for="task-title">Título de la tarea</label>
+            <input id="task-title" name="title" type="text" placeholder="Ej. Entrega del proyecto final" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="task-course">Curso</label>
+            <input id="task-course" name="course" type="text" placeholder="Ej. Inteligencia Artificial" maxlength="80" required>
+          </div>
+          <div class="field">
+            <label for="task-date">Fecha de entrega</label>
+            <input id="task-date" name="dueDate" type="date" required>
+          </div>
+          <div class="field">
+            <label for="task-priority">Prioridad</label>
+            <select id="task-priority" name="priority" required>
+              <option value="" selected disabled>Selecciona una prioridad</option>
+              <option value="alta">Alta</option>
+              <option value="media">Media</option>
+              <option value="baja">Baja</option>
+            </select>
+          </div>
+          <button class="submit-button" type="submit">
+            <span aria-hidden="true">+</span>
+            <span id="submit-label">Agregar tarea</span>
+          </button>
+          <button id="cancel-edit" class="cancel-button" type="button" hidden>Cancelar edición</button>
+        </form>
+        <p id="storage-message" class="storage-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel list-panel" aria-labelledby="list-title">
+        <div class="list-heading">
+          <h3 id="list-title">Mis tareas</h3>
+          <span class="task-count"><span id="task-count">0 tareas</span> en total</span>
+        </div>
+        <div class="task-stats" aria-label="Resumen de tareas">
+          <span class="stat-count">Total: <strong id="total-count">0</strong></span>
+          <span class="stat-count">Pendientes: <strong id="pending-count">0</strong></span>
+          <span class="stat-count">Completadas: <strong id="completed-count">0</strong></span>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filtrar tareas">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="filter-button" type="button" data-filter="pending" aria-pressed="false">Pendientes</button>
+          <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Completadas</button>
+        </div>
+        <div id="task-list" class="task-list" aria-live="polite"></div>
+      </section>
+    </section>
+    <p class="footer-note">Tus datos permanecen en el almacenamiento local de este navegador.</p>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
